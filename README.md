@@ -1,6 +1,6 @@
 The MAX-SAT problem is a generalization of the Boolean Satisfiability (SAT) problem. Given a Conjunctive Normal Form (CNF) of boolean variables, the aim is to find a boolean assignment to the variables in such a way, that maximum number of clauses are satisfied. There exists no polynomial time algorithm for MAX-SAT. Some existing algorithms use brute force technique, but they have exponential worst case time complexity. Randomization algorithms exist, but many suffer from local minima. This project uses the Seesaw Search (https://www.cs.rit.edu/~ark/mastersprojects/seesawsearch.shtml) technique for solving MAX-SAT, which is designed to work on multiple cores of a CPU, utilizing their full potential, to improve the efficiency of the search.
 
-Include the Parallel Java 2 (PJ2) library in your path.
+Include the Parallel Java 2 (PJ2) library (https://www.cs.rit.edu/~ark/pj2_20180501.jar) in your path.
 
 The input files are provided in the 'input' directory.
 
@@ -59,6 +59,4 @@ java pj2 MAXSATSolverSmp_3 input-file max-tries seesawSearchInstances
 <seesawSearchInstances> = The number of Seesaw Search instances to run in parallel.
 
 Example: java pj2 cores=50 MAXSATSolverSmp_3 250-1065.cnf 10000 100
-
-The Parallel Java 2 Library for running the programs is available at: https://www.cs.rit.edu/~ark/pj2_20180501.jar
 
